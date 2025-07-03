@@ -1,13 +1,17 @@
 import React, { useState } from "react";
-import "./Login.css"; // import external CSS
+import "./Login.css"; 
+import { useNavigate } from "react-router-dom";
 
-const AuthPage = () => {
+
+const Login = () => {
+    const navigate = useNavigate();
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
     username: "",
   });
+   
   const [errors, setErrors] = useState({});
 
   const validate = () => {
@@ -94,4 +98,4 @@ const AuthPage = () => {
   );
 };
 
-export default AuthPage;
+export default Login;
